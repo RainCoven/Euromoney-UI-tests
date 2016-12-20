@@ -1,5 +1,5 @@
 ﻿using EuromoneySeleniumTest.Pages;
-using System;
+using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using NUnit.Framework;
 using EuromoneySeleniumTest.Pages.Euromoney;
@@ -7,34 +7,53 @@ using EuromoneySeleniumTest.Pages.Euromoney;
 namespace EuromoneySeleniumTest.Steps.Euromoney
 {
     [Binding]
-    public class ManagmentPageSteps : BaseSteps
+    public class LegalMediatPageSteps : BaseSteps
     {
-        ManagmentPage _managmentPage;
+        LegalMediaPage _legalMediaPage;
+        Header _header;
+        BasePage _page;
+        PortfolioPage _portfolioPage;
 
-        public ManagmentPageSteps()
+        public LegalMediatPageSteps()
         {
-            _managmentPage = new ManagmentPage();
+            _legalMediaPage = new LegalMediaPage();
+            _header = new Header();
+            _portfolioPage = new PortfolioPage();
+            _page = new BasePage();
         }
 
-        [Given(@"I opened Management Page")]
-        public void GivenIOpenedManagementPage()
+        [When(@"I click Portholio button")]
+        public void WhenIClickPortholioButton()
         {
-            _managmentPage.Open();
+            _header.portfolioLink.Click();
         }
 
-        [Given(@"the page title is ""(.*)""")]
-        public void GivenThePageTitleIs(string pageTitle)
+        [Then(@"page title is ""(.*)""")]
+        [Then(@"""(.*)"" page should be opened")]
+        public void ThenPageShouldOpen(string pageTitle)
         {
-            _managmentPage.verifyPage(pageTitle);
+            _page.verifyPage(pageTitle);
         }
 
-        [Given(@"first image has an URL")]
-        public void GivenFirstImageHasAnURL()
+        [Given(@"I am on the Our portfolio page")]
+        public void GivenIAmOnTheOurPortfolioPage()
         {
-            var imageUrl = _managmentPage.firstImage.GetAttribute("src");
-            Assert.AreNotEqual(imageUrl, "", "Error: image URL is empty.");
+            _portfolioPage.Open();
         }
 
+        [When(@"I click on Legal media link")]
+        public void WhenIClickOnLegalMediaLink()
+        {
+            _portfolioPage.legalMediaLink.Click();
+        }
+
+        [Then(@"page has ""(.*)"" link")]
+        public void ThenPageHasLink(string linkText)
+        {
+            IWebDriver driver = (IWebDriver)ScenarioContext.Current["driver"];
+            var link = driver.FindElement(By.LinkText(linkText));
+            Assert.True(link.Displayed);
+        }
     }
 }
 
