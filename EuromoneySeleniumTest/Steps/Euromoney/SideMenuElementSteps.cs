@@ -9,7 +9,6 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
     public class SideMenuElementSteps : BaseSteps
     {
         SideMenu _sideMenu;
-        Header _header;
 
         public SideMenuElementSteps()
         {
