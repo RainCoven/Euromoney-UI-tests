@@ -1,5 +1,4 @@
-﻿using BasePageObjectModel;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace EuromoneySeleniumTest.Pages.Euromoney
 {
