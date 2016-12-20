@@ -24,12 +24,12 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         {
             foreach(TableRow row in table.Rows)
             {
-                var link = _sideMenu.menu.FindElement(By.LinkText(row["link"]));
-                Assert.True(link.Displayed, "Error: there is no link with name" + row["link"] + "in menu");
+                var link = _sideMenu.menu.FindElement(By.XPath("//ul[@id='menu']/li/a[contains(text(), '" + row["Link"] + "')]"));
+                Assert.True(link.Displayed, "Error: there is no link with name" + row["Link"] + "in menu");
             }
         }
 
-        [Then(@"footer will be visivle")]
+        [Then(@"footer will be visible")]
         public void ThenFooterWillBeVisivle()
         {
             Assert.True(_sideMenu.footer.Displayed);
@@ -46,8 +46,8 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         {
             foreach (TableRow row in table.Rows)
             {
-                var link = _sideMenu.footer.FindElement(By.LinkText(row["link"]));
-                Assert.True(link.Displayed, "Error: there is no link with name" + row["link"] + "in menu");
+                var link = _sideMenu.footer.FindElement(By.LinkText(row["Link"]));
+                Assert.True(link.Displayed, "Error: there is no link with name" + row["Link"] + "in menu");
             }
         }
 

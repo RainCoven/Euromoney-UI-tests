@@ -28,12 +28,12 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
 
         public IWebElement clickFirstLevelMenuItem(string itemName)
         {
-            var item = menu.FindElement(By.LinkText(itemName));
+            var item = menu.FindElement(By.XPath("//ul[@id='menu']/li/a[contains(text(), '" + itemName + "')]"));
 
             Assert.IsTrue(item.Displayed, "Error: no link with name " + itemName);
 
             item.Click();
-            item = menu.FindElement(By.LinkText(itemName));
+
             var secondLevelMenu = item.GetParent().FindElement(By.TagName("ul"));
 
             Assert.IsTrue(secondLevelMenu.Displayed, "Error: item has no 2nd level menu");
@@ -43,8 +43,9 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
 
         public void clickSecondLevelMenuItem(IWebElement menu,  string itemName)
         {
-            var item = menu.FindElement(By.LinkText(itemName));
+            var item = menu.FindElement(By.XPath("//ul[@id='menu']/li/ul/li/a[contains(text(), '" + itemName + "')]"));
             Assert.IsTrue(item.Displayed, "Error: no link with name " + itemName);
+            item.Click();
         }
 
         public void openSideMenu()

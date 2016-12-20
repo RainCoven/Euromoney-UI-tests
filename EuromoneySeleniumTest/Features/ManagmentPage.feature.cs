@@ -82,7 +82,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 12
  testRunner.And("then I click \"Management team\" second level menu link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
- testRunner.Then("\"Management team\" page should be opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Management team page should be opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -97,8 +97,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 16
  testRunner.Given("I opened Management Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
- testRunner.And("the page title is \"Management team | Who we are | Euromoney Institutional Investo" +
-                    "r PLC\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Managment page has corrext title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
  testRunner.And("first image has an URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
@@ -107,7 +106,9 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.Then("menu will be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "link"});
+                        "Link"});
+            table1.AddRow(new string[] {
+                        "Who we are"});
             table1.AddRow(new string[] {
                         "Investor Relations"});
             table1.AddRow(new string[] {
@@ -118,9 +119,9 @@ this.ScenarioSetup(scenarioInfo);
                         "Our portfolio"});
 #line 21
  testRunner.And("menu will have next links", ((string)(null)), table1, "And ");
-#line 27
- testRunner.And("footer will be visivle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
+ testRunner.And("footer will be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
  testRunner.And("LinkedIn icon will be presrsent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -133,7 +134,7 @@ this.ScenarioSetup(scenarioInfo);
                         "Privacy Policy"});
             table2.AddRow(new string[] {
                         "Cookie Policy"});
-#line 29
+#line 30
  testRunner.And("footer menu will have next links", ((string)(null)), table2, "And ");
 #line hidden
             this.ScenarioCleanup();

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using EuromoneySeleniumTest.Pages.Euromoney;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace EuromoneySeleniumTest.Steps.Euromoney
@@ -8,13 +9,14 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         [Given(@"I opened Management Page")]
         public void GivenIOpenedManagementPage()
         {
+            _managmentPage = new ManagmentPage();
             _managmentPage.Open();
         }
 
-        [Given(@"the page title is ""(.*)""")]
-        public void GivenThePageTitleIs(string pageTitle)
+        [Given(@"Managment page has corrext title")]
+        public void GivenThePageTitleIs()
         {
-            _managmentPage.verifyPage(pageTitle);
+            _managmentPage.verifyPage();
         }
 
         [Given(@"first image has an URL")]
@@ -23,6 +25,14 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
             var imageUrl = _managmentPage.firstImage.GetAttribute("src");
             Assert.AreNotEqual(imageUrl, "", "Error: image URL is empty.");
         }
+
+        [Then(@"Management team page should be opened")]
+        public void ThenManagementTeamPageShouldBeOpened()
+        {
+            _managmentPage = new ManagmentPage();
+            _managmentPage.verifyPage();
+        }
+
 
     }
 }

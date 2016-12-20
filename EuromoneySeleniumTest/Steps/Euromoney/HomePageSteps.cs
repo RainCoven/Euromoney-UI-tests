@@ -16,6 +16,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         [Given(@"I open side menu")]
         public void GivenIOpenSideMenu()
         {
+            _header = new Header();
             _header.menuButton.Click();
             Assert.True(_header.menuButton.Displayed, "Menu aren't visible");
         }
