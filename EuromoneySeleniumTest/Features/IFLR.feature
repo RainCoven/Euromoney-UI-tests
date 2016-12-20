@@ -17,6 +17,6 @@ Scenario: Choose package page
 	| Renew your package |
 
 Scenario: Choose personal package
-	Given I am on the "IFLR - International Financial Law Review" page
+	Given I am on the IFLR Subscription page
 	When I click select personal plan button
-	Then "Euromoney Checkout" page should opened
+	Then "Euromoney Checkout" page should be opened
