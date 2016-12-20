@@ -65,10 +65,10 @@ namespace EuromoneySeleniumTest.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Check Management Page")]
-        public virtual void CheckManagementPage()
+        [NUnit.Framework.DescriptionAttribute("Check Management Page existance")]
+        public virtual void CheckManagementPageExistance()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Management Page", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Management Page existance", ((string[])(null)));
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -83,10 +83,60 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And("then I click \"Management team\" second level menu link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
  testRunner.Then("\"Management team\" page should be opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 14
- testRunner.And("Page is dispayed correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Validate Management Page UI")]
+        public virtual void ValidateManagementPageUI()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Management Page UI", ((string[])(null)));
 #line 15
- testRunner.And("images have an url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
+#line 16
+ testRunner.Given("I opened Management Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 17
+ testRunner.And("the page title is \"Management team | Who we are | Euromoney Institutional Investo" +
+                    "r PLC\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
+ testRunner.And("first image has an URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+ testRunner.When("I will open side menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
+ testRunner.Then("menu will be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "link"});
+            table1.AddRow(new string[] {
+                        "Who we are"});
+            table1.AddRow(new string[] {
+                        "Investor Relations"});
+            table1.AddRow(new string[] {
+                        "Careers at Euromoney"});
+            table1.AddRow(new string[] {
+                        "Corporate social responsibility"});
+            table1.AddRow(new string[] {
+                        "Our portfolio"});
+#line 21
+ testRunner.And("menu will have next links", ((string)(null)), table1, "And ");
+#line 28
+ testRunner.And("footer will be visivle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
+ testRunner.And("LinkedIn icon will be presrsent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Link"});
+            table2.AddRow(new string[] {
+                        "Contact Us"});
+            table2.AddRow(new string[] {
+                        "T&Cs"});
+            table2.AddRow(new string[] {
+                        "Privacy Policy"});
+            table2.AddRow(new string[] {
+                        "Cookie Policy"});
+#line 30
+ testRunner.And("footer menu will have next links", ((string)(null)), table2, "And ");
 #line hidden
             this.ScenarioCleanup();
         }
