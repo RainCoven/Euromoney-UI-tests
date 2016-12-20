@@ -1,13 +1,13 @@
 ﻿using BasePageObjectModel;
 using OpenQA.Selenium;
 
-namespace EuromoneySeleniumTest.Pages
+namespace EuromoneySeleniumTest.Pages.IFLR
 {
     class HomePage : BasePage
     {
         public HomePage()
 		{
-            baseUrl = "http://www.euromoneyplc.com/";
+            baseUrl = "http://www.iflr.com/";
         }
     }
 }
