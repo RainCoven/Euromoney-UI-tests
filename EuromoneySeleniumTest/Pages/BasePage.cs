@@ -16,6 +16,7 @@ namespace EuromoneySeleniumTest.Pages
     {
         public IWebDriver driver;
         public static string baseUrl;
+        public static string pageTitle;
         public BasePage()
         {
             driver = (IWebDriver)ScenarioContext.Current["driver"];
@@ -44,6 +45,11 @@ namespace EuromoneySeleniumTest.Pages
             {
                 throw new InvalidOperationException("This page is not " + pageTitle + ". The title is: " + driver.Title);
             }
+        }
+
+        public void verifyPage()
+        {
+            verifyPage(pageTitle);
         }
 
         public void visit(string url, string pageTitle)

@@ -109,8 +109,6 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "link"});
             table1.AddRow(new string[] {
-                        "Who we are"});
-            table1.AddRow(new string[] {
                         "Investor Relations"});
             table1.AddRow(new string[] {
                         "Careers at Euromoney"});
@@ -120,9 +118,9 @@ this.ScenarioSetup(scenarioInfo);
                         "Our portfolio"});
 #line 21
  testRunner.And("menu will have next links", ((string)(null)), table1, "And ");
-#line 28
+#line 27
  testRunner.And("footer will be visivle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 28
  testRunner.And("LinkedIn icon will be presrsent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -135,7 +133,7 @@ this.ScenarioSetup(scenarioInfo);
                         "Privacy Policy"});
             table2.AddRow(new string[] {
                         "Cookie Policy"});
-#line 30
+#line 29
  testRunner.And("footer menu will have next links", ((string)(null)), table2, "And ");
 #line hidden
             this.ScenarioCleanup();

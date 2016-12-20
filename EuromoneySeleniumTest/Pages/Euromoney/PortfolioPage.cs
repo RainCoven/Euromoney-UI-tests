@@ -7,11 +7,14 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
         public PortfolioPage()
 		{
             baseUrl = "http://www.euromoneyplc.com/our-portfolio";
+            pageTitle = "Our portfolio | Euromoney Institutional Investor PLC";
         }
 
         public IWebElement legalMediaLink
         {
             get { return driver.FindElement(By.XPath("/html/body/section/div[4]/div/div/div/div/div[1]/div/p[2]/a")); }
         }
+
+
     }
 }

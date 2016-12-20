@@ -15,7 +15,7 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
 
         public IWebElement portfolioLink
         {
-            get { return driver.FindElement(By.LinkText("Portfolio")); }
+            get { return driver.FindElement(By.XPath("//header//a[@href='/our-portfolio']")); }
         }
     }
 }

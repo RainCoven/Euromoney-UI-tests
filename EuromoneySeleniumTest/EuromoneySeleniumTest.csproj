@@ -86,18 +86,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IFLR.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\PortfolioPage.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PortfolioPage.feature</DependentUpon>
-    </Compile>
     <Compile Include="Features\ManagmentPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ManagmentPage.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\PortfolioPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortfolioPage.feature</DependentUpon>
+    </Compile>
     <Compile Include="Hooks\Setup.cs" />
     <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Pages\Euromoney\HomePage.cs" />
     <Compile Include="Pages\Euromoney\PortfolioPage.cs" />
     <Compile Include="Pages\Euromoney\LegalMediaPage.cs" />
     <Compile Include="Pages\IFLR\CheckoutPage.cs" />
@@ -105,11 +106,11 @@
     <Compile Include="Pages\IFLR\HomePage.cs" />
     <Compile Include="Pages\Euromoney\SideMenu.cs" />
     <Compile Include="Pages\Euromoney\ManagmentPage.cs" />
-    <Compile Include="Pages\Euromoney\HomePage.cs" />
     <Compile Include="Pages\Euromoney\Header.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
-    <Compile Include="Steps\Euromoney\LegalMediatPageSteps.cs" />
+    <Compile Include="Steps\Euromoney\EuromoneySteps.cs" />
+    <Compile Include="Steps\Euromoney\LegalMediaPageSteps.cs" />
     <Compile Include="Steps\Euromoney\SideMenuElementSteps.cs" />
     <Compile Include="Steps\Euromoney\ManagmentPageSteps.cs" />
     <Compile Include="Steps\Euromoney\HomePageSteps.cs" />

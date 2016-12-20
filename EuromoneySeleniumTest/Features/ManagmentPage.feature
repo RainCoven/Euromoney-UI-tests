@@ -20,7 +20,6 @@ Scenario: Validate Management Page UI
 	Then menu will be visible
 	And menu will have next links
 	| link								|
-	| Who we are						|
 	| Investor Relations				|
 	| Careers at Euromoney				|
 	| Corporate social responsibility	|
@@ -33,4 +32,3 @@ Scenario: Validate Management Page UI
 	| T&Cs			 |
 	| Privacy Policy |
 	| Cookie Policy  |
-

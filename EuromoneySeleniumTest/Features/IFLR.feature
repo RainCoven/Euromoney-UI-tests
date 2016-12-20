@@ -1,8 +1,8 @@
 ﻿Feature: IFLR
 
 Scenario: Open IFLR from euromoney site
-	Given I am on the Our portfolio page
-	When I click "VISIT IFLR" link
+	Given I am on the Legal Media page
+	When I click VISIT IFLR link
 	Then IFLR site is opened in new tab
 	And page title is "International Financial Law Review - Home | IFLR.com"
 

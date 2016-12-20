@@ -55,5 +55,6 @@ namespace EuromoneySeleniumTest.Steps.IFLR
                 Assert.True(plan.Displayed);
             }
         }
+
     }
 }

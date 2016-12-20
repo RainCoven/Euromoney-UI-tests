@@ -1,29 +1,15 @@
-﻿using EuromoneySeleniumTest.Pages;
-using OpenQA.Selenium;
-using System;
-using TechTalk.SpecFlow;
+﻿using EuromoneySeleniumTest.Pages.Euromoney;
 using NUnit.Framework;
-using EuromoneySeleniumTest.Pages.Euromoney;
+using TechTalk.SpecFlow;
 
 namespace EuromoneySeleniumTest.Steps.Euromoney
 {
-    [Binding]
-    public class HomePageSteps : BaseSteps
+    public partial class EuromoneySteps : BaseSteps
     {
-        HomePage _homePage;
-        Header _header;
-        SideMenu _sideMenu;
-        IWebElement _subMenu;
-
-        public HomePageSteps()
-        {
-            _homePage = new HomePage();
-            _header = new Header();
-        }
-
         [Given(@"I opened the home page")]
         public void GivenIOpenedTheHomePage()
         {
+            _homePage = new HomePage();
             _homePage.Open();
         }
         
@@ -51,13 +37,6 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         public void ThenThenIClickSecondLevelMenuLink(string linkName)
         {
             _sideMenu.clickSecondLevelMenuItem(_subMenu, linkName);
-        }
-        
-        [Then(@"""(.*)"" page should be opened")]
-        public void ThenPageShouldBeOpened(string pageTitle)
-        {
-            ManagmentPage page = new ManagmentPage();
-            page.verifyPage(pageTitle);
         }
     }
 }

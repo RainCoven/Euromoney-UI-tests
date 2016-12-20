@@ -28,12 +28,12 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
 
         public IWebElement clickFirstLevelMenuItem(string itemName)
         {
-            var test = menu;
             var item = menu.FindElement(By.LinkText(itemName));
 
             Assert.IsTrue(item.Displayed, "Error: no link with name " + itemName);
 
             item.Click();
+            item = menu.FindElement(By.LinkText(itemName));
             var secondLevelMenu = item.GetParent().FindElement(By.TagName("ul"));
 
             Assert.IsTrue(secondLevelMenu.Displayed, "Error: item has no 2nd level menu");

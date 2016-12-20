@@ -71,9 +71,9 @@ namespace EuromoneySeleniumTest.Features
 #line 3
 this.ScenarioSetup(scenarioInfo);
 #line 4
- testRunner.Given("I am on the Our portfolio page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the Legal Media page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 5
- testRunner.When("I click \"VISIT IFLR\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click VISIT IFLR link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 6
  testRunner.Then("IFLR site is opened in new tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 7

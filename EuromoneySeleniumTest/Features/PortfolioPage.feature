@@ -8,10 +8,10 @@
 Scenario: Check Our Portfolio Page existance
 	Given I opened the home page
 	When I click Portholio button
-	Then "Our portfolio | Euromoney Institutional Investor PLC" page should open
+	Then I should see Portfolio page
 
 Scenario: Open Legal Media page
 	Given I am on the Our portfolio page
 	When I click on Legal media link
-	Then "Legal media | Our portfolio | Euromoney Institutional Investor PLC" page should open
+	Then I should see Legal media page
 	And page has "VISIT IFLR" link

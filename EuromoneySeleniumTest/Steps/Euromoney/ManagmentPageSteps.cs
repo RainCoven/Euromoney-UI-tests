@@ -1,21 +1,10 @@
-﻿using EuromoneySeleniumTest.Pages;
-using System;
+﻿using NUnit.Framework;
 using TechTalk.SpecFlow;
-using NUnit.Framework;
-using EuromoneySeleniumTest.Pages.Euromoney;
 
 namespace EuromoneySeleniumTest.Steps.Euromoney
 {
-    [Binding]
-    public class ManagmentPageSteps : BaseSteps
+    public partial class EuromoneySteps : BaseSteps
     {
-        ManagmentPage _managmentPage;
-
-        public ManagmentPageSteps()
-        {
-            _managmentPage = new ManagmentPage();
-        }
-
         [Given(@"I opened Management Page")]
         public void GivenIOpenedManagementPage()
         {

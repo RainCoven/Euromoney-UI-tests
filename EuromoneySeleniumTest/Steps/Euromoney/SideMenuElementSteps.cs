@@ -1,23 +1,15 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using TechTalk.SpecFlow;
-using NUnit.Framework;
-using EuromoneySeleniumTest.Pages.Euromoney;
 
 namespace EuromoneySeleniumTest.Steps.Euromoney
 {
-    [Binding]
-    public class SideMenuElementSteps : BaseSteps
+    public partial class EuromoneySteps : BaseSteps
     {
-        SideMenu _sideMenu;
-
-        public SideMenuElementSteps()
-        {
-            _sideMenu = new SideMenu();
-        }
-
         [When(@"I will open side menu")]
         public void WhenIWillOpenSideMenu()
         {
+            _sideMenu = new Pages.Euromoney.SideMenu();
             _sideMenu.openSideMenu();
         }
 

@@ -76,7 +76,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 10
  testRunner.When("I click Portholio button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.Then("\"Our portfolio | Euromoney Institutional Investor PLC\" page should open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see Portfolio page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -93,8 +93,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 15
  testRunner.When("I click on Legal media link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
- testRunner.Then("\"Legal media | Our portfolio | Euromoney Institutional Investor PLC\" page should " +
-                    "open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see Legal media page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
  testRunner.And("page has \"VISIT IFLR\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
