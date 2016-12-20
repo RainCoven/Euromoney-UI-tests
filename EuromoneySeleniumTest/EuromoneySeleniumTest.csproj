@@ -98,15 +98,18 @@
     </Compile>
     <Compile Include="Hooks\Setup.cs" />
     <Compile Include="Pages\BasePage.cs" />
-    <Compile Include="Pages\SideMenu.cs" />
-    <Compile Include="Pages\ManagmentPage.cs" />
-    <Compile Include="Pages\HomePage.cs" />
-    <Compile Include="Pages\Header.cs" />
+    <Compile Include="Pages\IFLR\CheckoutPage.cs" />
+    <Compile Include="Pages\IFLR\SubscriptionPage.cs" />
+    <Compile Include="Pages\IFLR\HomePage.cs" />
+    <Compile Include="Pages\Euromoney\SideMenu.cs" />
+    <Compile Include="Pages\Euromoney\ManagmentPage.cs" />
+    <Compile Include="Pages\Euromoney\HomePage.cs" />
+    <Compile Include="Pages\Euromoney\Header.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
-    <Compile Include="Steps\SideMenuElementSteps.cs" />
-    <Compile Include="Steps\ManagmentPageSteps.cs" />
-    <Compile Include="Steps\HomePageSteps.cs" />
+    <Compile Include="Steps\Euromoney\SideMenuElementSteps.cs" />
+    <Compile Include="Steps\Euromoney\ManagmentPageSteps.cs" />
+    <Compile Include="Steps\Euromoney\HomePageSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -136,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="chromedriver.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Steps\IFLR\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

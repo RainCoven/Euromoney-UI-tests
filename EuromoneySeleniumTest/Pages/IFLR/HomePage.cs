@@ -1,5 +1,4 @@
-﻿using BasePageObjectModel;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace EuromoneySeleniumTest.Pages.IFLR
 {
@@ -8,6 +7,11 @@ namespace EuromoneySeleniumTest.Pages.IFLR
         public HomePage()
 		{
             baseUrl = "http://www.iflr.com/";
+        }
+
+        public IWebElement subscribeButton
+        {
+            get { return driver.FindElement(By.Id("ctl00_HeaderLoginOptions1_hlSubscribe")); }
         }
     }
 }

@@ -1,10 +1,9 @@
-﻿using EuromoneySeleniumTest.Pages;
-using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using NUnit.Framework;
+using EuromoneySeleniumTest.Pages.Euromoney;
 
-namespace EuromoneySeleniumTest.Steps
+namespace EuromoneySeleniumTest.Steps.Euromoney
 {
     [Binding]
     public class SideMenuElementSteps : BaseSteps

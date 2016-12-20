@@ -3,8 +3,9 @@ using OpenQA.Selenium;
 using System;
 using TechTalk.SpecFlow;
 using NUnit.Framework;
+using EuromoneySeleniumTest.Pages.Euromoney;
 
-namespace EuromoneySeleniumTest.Steps
+namespace EuromoneySeleniumTest.Steps.Euromoney
 {
     [Binding]
     public class HomePageSteps : BaseSteps
