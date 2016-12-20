@@ -24,7 +24,7 @@ namespace EuromoneySeleniumTest.Features
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Story1.feature"
+#line 1 "ManagmentPage.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
