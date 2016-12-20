@@ -1,11 +1,36 @@
 ﻿Feature: SpecFlowFeature1
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	As a user
+	I want to click the Who we are -> Management team menu item
+	So that we can see that the correct page is displayed
 
-@mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+
+Scenario: Check Management Page existance
+	Given I opened the home page
+	And I open side menu
+	When I click "Who we are" first level menu link
+	Then Submenu will be opened
+	And then I click "Management team" second level menu link
+	Then "Management team" page should be opened
+
+Scenario: Validate Management Page UI
+	Given I opened Management Page
+	And the page title is "Management team | Who we are | Euromoney Institutional Investor PLC"
+	And first image has an URL
+	When I will open side menu
+	Then menu will be visible
+	And menu will have next links
+	| link								|
+	| Who we are						|
+	| Investor Relations				|
+	| Careers at Euromoney				|
+	| Corporate social responsibility	|
+	| Our portfolio						|
+	And footer will be visivle
+	And LinkedIn icon will be presrsent
+	And footer menu will have next links
+	| Link			 |
+	| Contact Us	 |
+	| T&Cs			 |
+	| Privacy Policy |
+	| Cookie Policy  |
+

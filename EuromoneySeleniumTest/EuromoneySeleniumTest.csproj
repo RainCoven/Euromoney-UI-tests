@@ -81,10 +81,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Features\Story1.feature.cs">
+    <Compile Include="Features\IFLR.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Story1.feature</DependentUpon>
+      <DependentUpon>IFLR.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\PortfolioPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PortfolioPage.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ManagmentPage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagmentPage.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks\Setup.cs" />
     <Compile Include="Pages\BasePage.cs" />
@@ -103,9 +113,17 @@
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Features\Story1.feature">
+    <None Include="Features\IFLR.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Story1.feature.cs</LastGenOutput>
+      <LastGenOutput>IFLR.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\PortfolioPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PortfolioPage.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\ManagmentPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ManagmentPage.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />

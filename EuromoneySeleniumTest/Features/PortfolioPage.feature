@@ -1,11 +1,17 @@
-﻿Feature: SpecFlowFeature1
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+﻿Feature: SpecFlowFeature2
+	As a user
+	I want to see International Financial Law Review on Our Portfolio -> Legal Media Page
+	So that I can reach it and see subscription info
 
-@mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+
+
+Scenario: Check Our Portfolio Page existance
+	Given I opened the home page
+	When I click Portholio button
+	Then "Our portfolio | Euromoney Institutional Investor PLC" page should open
+
+Scenario: Open Legal Media page
+	Given I am on the Our portfolio page
+	When I click on Legal media link
+	Then "Legal media | Our portfolio | Euromoney Institutional Investor PLC" page should open
+	And page has "VISIT IFLR" link
