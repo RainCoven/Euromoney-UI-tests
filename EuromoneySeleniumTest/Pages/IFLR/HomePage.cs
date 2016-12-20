@@ -7,6 +7,7 @@ namespace EuromoneySeleniumTest.Pages.IFLR
         public HomePage()
 		{
             baseUrl = "http://www.iflr.com/";
+            pageTitle = "International Financial Law Review - Home | IFLR.com";
         }
 
         public IWebElement subscribeButton

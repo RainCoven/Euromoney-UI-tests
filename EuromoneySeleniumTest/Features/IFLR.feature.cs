@@ -77,7 +77,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 6
  testRunner.Then("IFLR site is opened in new tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 7
- testRunner.And("page title is \"International Financial Law Review - Home | IFLR.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("IFLR home page has correct title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -94,7 +94,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 11
  testRunner.When("I click Subscribe button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
- testRunner.Then("\"IFLR - International Financial Law Review\" page should opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Subscription page should be opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Option"});
@@ -122,7 +122,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 21
  testRunner.When("I click select personal plan button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
- testRunner.Then("\"Euromoney Checkout\" page should be opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Checkout page should be opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

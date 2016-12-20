@@ -10,21 +10,19 @@ namespace EuromoneySeleniumTest.Steps.IFLR
     {
         HomePage _homePage;
         SubscriptionPage _subscriptionPage;
-
-        public IFLRSteps()
-        {
-            _homePage = new HomePage();
-        }
+        CheckoutPage _checkoutPage;
 
         [Given(@"I am on the IFLR main page")]
         public void GivenIAmOnTheIFLRMainPage()
         {
+            _homePage = new HomePage();
             _homePage.Open();
         }
         
         [Given(@"I am on the IFLR Subscription page")]
         public void GivenIAmOnTheSubscriptionPage()
         {
+            _subscriptionPage = new SubscriptionPage();
             _subscriptionPage.Open();
         }
         
@@ -55,6 +53,27 @@ namespace EuromoneySeleniumTest.Steps.IFLR
                 Assert.True(plan.Displayed);
             }
         }
+
+        [Then(@"IFLR home page has correct title")]
+        public void ThenIFLRHomePageHasCorrectTitle()
+        {
+            _homePage.verifyPage();
+        }
+
+        [Then(@"Subscription page should be opened")]
+        public void ThenSubscriptionPageShouldBeOpened()
+        {
+            _subscriptionPage = new SubscriptionPage();
+            _subscriptionPage.verifyPage();
+        }
+
+        [Then(@"Checkout page should be opened")]
+        public void ThenCheckoutPageShouldBeOpened()
+        {
+            _checkoutPage = new CheckoutPage();
+            _checkoutPage.verifyPage();
+        }
+
 
     }
 }
