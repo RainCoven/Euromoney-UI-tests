@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Support.UI;
 using System.Configuration;
+using NUnit.Framework;
 
 namespace EuromoneySeleniumTest.Pages
 {
     [Binding]
-    class BasePage
+    public class BasePage
     {
-        readonly IWebDriver driver;
+        public IWebDriver driver;
         public static string baseUrl;
         public BasePage()
         {
