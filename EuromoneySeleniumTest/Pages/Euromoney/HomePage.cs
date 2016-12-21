@@ -9,5 +9,15 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
             baseUrl = "http://www.euromoneyplc.com/";
             pageTitle = "Home | Euromoney Institutional Investor PLC";
         }
+
+        public Header Header
+        {
+            get { return new Header(); }
+        }
+
+        public SideMenu SideMenu
+        {
+            get { return new SideMenu(); }
+        }
     }
 }

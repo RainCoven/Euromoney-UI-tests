@@ -17,6 +17,7 @@ namespace EuromoneySeleniumTest.Pages
         public IWebDriver driver;
         public static string baseUrl;
         public static string pageTitle;
+
         public BasePage()
         {
             driver = (IWebDriver)ScenarioContext.Current["driver"];

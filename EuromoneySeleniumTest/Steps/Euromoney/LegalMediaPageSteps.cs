@@ -10,7 +10,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         [When(@"I click Portholio button")]
         public void WhenIClickPortholioButton()
         {
-            _header = new Header();
+            _header = _homePage.Header;
             _header.PortfolioLink.Click();
         }
 
@@ -32,7 +32,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         {
             IWebDriver driver = (IWebDriver)ScenarioContext.Current["driver"];
             var link = driver.FindElement(By.LinkText(linkText));
-            Assert.True(link.Displayed);
+            Assert.True(link.Displayed, "Error: Link with text \"" + linkText + "\" aren't displayed on the page.");
         }
 
         [Given(@"I am on the Legal Media page")]

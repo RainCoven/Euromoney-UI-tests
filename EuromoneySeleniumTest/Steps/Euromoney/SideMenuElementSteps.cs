@@ -9,7 +9,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         [When(@"I will open side menu")]
         public void WhenIWillOpenSideMenu()
         {
-            _sideMenu = new Pages.Euromoney.SideMenu();
+            _sideMenu = _managmentPage.SideMenu;
             _sideMenu.OpenSideMenu();
         }
 

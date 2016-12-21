@@ -16,22 +16,22 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         [Given(@"I open side menu")]
         public void GivenIOpenSideMenu()
         {
-            _header = new Header();
+            _header = _homePage.Header;
             _header.MenuButton.Click();
-            Assert.True(_header.MenuButton.Displayed, "Menu aren't visible");
+            Assert.True(_header.MenuButton.Displayed, "Error: Menu aren't visible");
         }
         
         [When(@"I click ""(.*)"" first level menu link")]
         public void WhenIClickFirstLevelMenuLink(string linkName)
         {
-            _sideMenu = new SideMenu();
+            _sideMenu = _homePage.SideMenu;
             _subMenu = _sideMenu.ClickFirstLevelMenuItem(linkName);
         }
         
         [Then(@"Submenu will be opened")]
         public void ThenSubmenuWillBeOpened()
         {
-            Assert.True(_subMenu.Displayed);
+            Assert.True(_subMenu.Displayed, "Error: side menu wasn't opened.");
         }
         
         [Then(@"then I click ""(.*)"" second level menu link")]
