@@ -16,13 +16,13 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         [Given(@"Managment page has corrext title")]
         public void GivenThePageTitleIs()
         {
-            _managmentPage.verifyPage();
+            _managmentPage.VerifyPage();
         }
 
         [Given(@"first image has an URL")]
         public void GivenFirstImageHasAnURL()
         {
-            var imageUrl = _managmentPage.firstImage.GetAttribute("src");
+            var imageUrl = _managmentPage.FirstImage.GetAttribute("src");
             Assert.AreNotEqual(imageUrl, "", "Error: image URL is empty.");
         }
 
@@ -30,7 +30,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         public void ThenManagementTeamPageShouldBeOpened()
         {
             _managmentPage = new ManagmentPage();
-            _managmentPage.verifyPage();
+            _managmentPage.VerifyPage();
         }
 
 

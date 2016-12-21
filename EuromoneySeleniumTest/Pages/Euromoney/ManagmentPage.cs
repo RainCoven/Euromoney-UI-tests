@@ -11,7 +11,7 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
             pageTitle = "Management team | Who we are | Euromoney Institutional Investor PLC";
         }
 
-        public IWebElement firstImage
+        public IWebElement FirstImage
         {
             get { return driver.FindElement(By.XPath("(//img)[1]")); }
         }

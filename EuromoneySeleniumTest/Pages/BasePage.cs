@@ -27,19 +27,14 @@ namespace EuromoneySeleniumTest.Pages
             driver.Navigate().GoToUrl(baseUrl);
         }
 
-        public void type(string inputText, By locator)
-        {
-            find(locator).SendKeys(inputText);
-        }
-
-        public IWebElement find(By locator)
+        public IWebElement Find(By locator)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
             wait.Until(ExpectedConditions.ElementIsVisible(locator));
             return driver.FindElement(locator);
         }
 
-        public void verifyPage(string pageTitle)
+        public void VerifyPage(string pageTitle)
         {
             if (!pageTitle.Equals(driver.Title))
             {
@@ -47,28 +42,18 @@ namespace EuromoneySeleniumTest.Pages
             }
         }
 
-        public void verifyPage()
+        public void VerifyPage()
         {
-            verifyPage(pageTitle);
+            VerifyPage(pageTitle);
         }
 
-        public void visit(string url, string pageTitle)
+        public void Visit(string url, string pageTitle)
         {
             driver.Navigate().GoToUrl(baseUrl + url);
-            verifyPage(pageTitle);
+            VerifyPage(pageTitle);
         }
 
-        public void click(By locator)
-        {
-            find(locator).Click();
-        }
-
-        public string getText(By locator)
-        {
-            return find(locator).Text;
-        }
-
-        public bool isElementPresent(By locator, string expectedText)
+        public bool IsElementPresent(By locator, string expectedText)
         {
 
             IList<IWebElement> subelements = driver.FindElements(locator);
@@ -84,50 +69,17 @@ namespace EuromoneySeleniumTest.Pages
             return false;
         }
 
-        public bool isDisplayed(By locator)
+        public bool IsDisplayed(By locator)
         {
             try
             {
-                IWebElement element = find(locator);
+                IWebElement element = Find(locator);
                 return element.Displayed && element.Enabled;
             }
             catch (NoSuchElementException ex)
             {
                 return false;
             }
-        }
-
-        public void submit(By locator)
-        {
-            find(locator).Submit();
-        }
-
-        public string getLinkDestination(By locator)
-        {
-            return find(locator).GetAttribute("href");
-        }
-
-        public void check(By locator)
-        {
-            IWebElement element = find(locator);
-            if (!element.Selected)
-            {
-                element.Click();
-            }
-        }
-
-        public void uncheck(By locator)
-        {
-            IWebElement element = find(locator);
-            if (element.Selected)
-            {
-                element.Click();
-            }
-        }
-
-        public bool isSelected(By locator)
-        {
-            return find(locator).Selected;
         }
     }
 }

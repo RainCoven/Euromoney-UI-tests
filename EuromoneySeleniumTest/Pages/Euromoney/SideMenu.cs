@@ -10,7 +10,7 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
         {
         }
 
-        public IWebElement footer
+        public IWebElement Footer
         {
             get { return driver.FindElement(By.Id("site_footer")); }
         }
@@ -18,17 +18,17 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
 
         public IWebElement LinkedInButton
         {
-            get { return footer.FindElement(By.ClassName("icon-linkedin")); }
+            get { return Footer.FindElement(By.ClassName("icon-linkedin")); }
         }
 
-        public IWebElement menu
+        public IWebElement Menu
         {
             get { return driver.FindElement(By.Id("menu")); }
         }
 
-        public IWebElement clickFirstLevelMenuItem(string itemName)
+        public IWebElement ClickFirstLevelMenuItem(string itemName)
         {
-            var item = menu.FindElement(By.XPath("//ul[@id='menu']/li/a[contains(text(), '" + itemName + "')]"));
+            var item = Menu.FindElement(By.XPath("//ul[@id='menu']/li/a[contains(text(), '" + itemName + "')]"));
 
             Assert.IsTrue(item.Displayed, "Error: no link with name " + itemName);
 
@@ -41,7 +41,7 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
             return secondLevelMenu;
         }
 
-        public void clickSecondLevelMenuItem(IWebElement menu,  string itemName)
+        public void ClickSecondLevelMenuItem(IWebElement menu,  string itemName)
         {
             var item = menu.FindElement(By.XPath("//ul[@id='menu']/li/ul/li/a[contains(text(), '" + itemName + "')]"));
             Assert.IsTrue(item.Displayed, "Error: no link with name " + itemName);
@@ -49,7 +49,7 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
             item.Click();
         }
 
-        public void openSideMenu()
+        public void OpenSideMenu()
         {
             driver.FindElement(By.ClassName("icon-nav")).Click();
         }

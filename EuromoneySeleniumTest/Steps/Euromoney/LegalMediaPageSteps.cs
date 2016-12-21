@@ -11,7 +11,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         public void WhenIClickPortholioButton()
         {
             _header = new Header();
-            _header.portfolioLink.Click();
+            _header.PortfolioLink.Click();
         }
 
         [Given(@"I am on the Our portfolio page")]
@@ -24,7 +24,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         [When(@"I click on Legal media link")]
         public void WhenIClickOnLegalMediaLink()
         {
-            _portfolioPage.legalMediaLink.Click();
+            _portfolioPage.LegalMediaLink.Click();
         }
 
         [Then(@"page has ""(.*)"" link")]
@@ -52,14 +52,14 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         public void ThenIShouldSeePortfolioPage()
         {
             _portfolioPage = new PortfolioPage();
-            _portfolioPage.verifyPage();
+            _portfolioPage.VerifyPage();
         }
 
         [Then(@"I should see Legal media page")]
         public void ThenIShouldSeeLegalMediaPage()
         {
             _legalMediaPage = new LegalMediaPage();
-            _legalMediaPage.verifyPage();
+            _legalMediaPage.VerifyPage();
         }
 
 

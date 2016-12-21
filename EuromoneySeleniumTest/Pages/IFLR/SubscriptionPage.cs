@@ -11,12 +11,12 @@ namespace EuromoneySeleniumTest.Pages.IFLR
             pageTitle = "IFLR - International Financial Law Review";
         }
 
-        public IWebElement personalSubscriptionButton
+        public IWebElement PersonalSubscriptionButton
         {
             get { return driver.FindElement(By.XPath("//*[@id='content']/div/table/tbody/tr[4]/td[1]/a")); }
         }
 
-        public IWebElement packages
+        public IWebElement Packages
         {
             get { return driver.FindElement(By.ClassName("packages")); }
         }

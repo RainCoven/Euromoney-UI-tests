@@ -9,11 +9,11 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
             
         }
 
-        public IWebElement menuButton {
+        public IWebElement MenuButton {
             get { return driver.FindElement(By.CssSelector(".main_navigation .menu_trigger")); }
         }
 
-        public IWebElement portfolioLink
+        public IWebElement PortfolioLink
         {
             get { return driver.FindElement(By.XPath("//header//a[@href='/our-portfolio']")); }
         }

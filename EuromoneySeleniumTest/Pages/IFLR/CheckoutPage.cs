@@ -12,18 +12,18 @@ namespace EuromoneySeleniumTest.Pages.IFLR
             pageTitle = "Euromoney Checkout";
         }
 
-        private IWebElement activePlan{
+        private IWebElement ActivePlan{
            get { return driver.FindElement(By.XPath("//div[@id='ctl00_MainContent_baseProduct_SubscriptionProduct_divSubscriptionPanel']/div[@class='row active']")); }
         }
 
-        public string getSelectedPlanName()
+        public string GetSelectedPlanName()
         {
-            return activePlan.FindElement(By.ClassName("subscription-option")).Text;
+            return ActivePlan.FindElement(By.ClassName("subscription-option")).Text;
         }
 
         public void AssertCurency()
         {
-            var price = activePlan.FindElement(By.TagName("h5")).Text;
+            var price = ActivePlan.FindElement(By.TagName("h5")).Text;
             Assert.True(price.Contains("£"));
         }
     }

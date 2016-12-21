@@ -10,7 +10,7 @@ namespace EuromoneySeleniumTest.Pages.IFLR
             pageTitle = "International Financial Law Review - Home | IFLR.com";
         }
 
-        public IWebElement subscribeButton
+        public IWebElement SubscribeButton
         {
             get { return driver.FindElement(By.Id("ctl00_HeaderLoginOptions1_hlSubscribe")); }
         }

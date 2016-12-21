@@ -29,13 +29,13 @@ namespace EuromoneySeleniumTest.Steps.IFLR
         [When(@"I click Subscribe button")]
         public void WhenIClickSubscribeButton()
         {
-            _homePage.subscribeButton.Click();
+            _homePage.SubscribeButton.Click();
         }
         
         [When(@"I click select personal plan button")]
         public void WhenIClickSelectPersonalPlanButton()
         {
-            _subscriptionPage.personalSubscriptionButton.Click();
+            _subscriptionPage.PersonalSubscriptionButton.Click();
         }
         
         [Then(@"IFLR site is opened in new tab")]
@@ -48,7 +48,7 @@ namespace EuromoneySeleniumTest.Steps.IFLR
             driver.SwitchTo().Window(driver.WindowHandles[curTabsNum - 1]);
 
             Assert.True(curTabsNum > 1);
-            _homePage.verifyPage();
+            _homePage.VerifyPage();
         }
         
         [Then(@"there should be next personal plan Options")]
@@ -56,7 +56,7 @@ namespace EuromoneySeleniumTest.Steps.IFLR
         {
             foreach(TableRow roe in table.Rows)
             {
-                var plan = _subscriptionPage.packages.FindElement(By.XPath("//h2[contains(text(), 'package')]"));
+                var plan = _subscriptionPage.Packages.FindElement(By.XPath("//h2[contains(text(), 'package')]"));
                 Assert.True(plan.Displayed);
             }
         }
@@ -64,21 +64,21 @@ namespace EuromoneySeleniumTest.Steps.IFLR
         [Then(@"IFLR home page has correct title")]
         public void ThenIFLRHomePageHasCorrectTitle()
         {
-            _homePage.verifyPage();
+            _homePage.VerifyPage();
         }
 
         [Then(@"Subscription page should be opened")]
         public void ThenSubscriptionPageShouldBeOpened()
         {
             _subscriptionPage = new SubscriptionPage();
-            _subscriptionPage.verifyPage();
+            _subscriptionPage.VerifyPage();
         }
 
         [Then(@"Checkout page should be opened")]
         public void ThenCheckoutPageShouldBeOpened()
         {
             _checkoutPage = new CheckoutPage();
-            _checkoutPage.verifyPage();
+            _checkoutPage.VerifyPage();
         }
 
         [Then(@"priices are in pounds")]
@@ -90,7 +90,7 @@ namespace EuromoneySeleniumTest.Steps.IFLR
         [Then(@"""(.*)"" package is selected by default")]
         public void ThenPackageIsSelectedByDefault(string packageName)
         {
-            Assert.AreEqual(packageName, _checkoutPage.getSelectedPlanName(), "Error: wrong default plan selected.");
+            Assert.AreEqual(packageName, _checkoutPage.GetSelectedPlanName(), "Error: wrong default plan selected.");
         }
 
 
