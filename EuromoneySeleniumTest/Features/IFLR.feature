@@ -20,3 +20,5 @@ Scenario: Choose personal package
 	Given I am on the IFLR Subscription page
 	When I click select personal plan button
 	Then Checkout page should be opened
+	And priices are in pounds
+	And "12 Months" package is selected by default

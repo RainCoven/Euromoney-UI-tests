@@ -81,6 +81,18 @@ namespace EuromoneySeleniumTest.Steps.IFLR
             _checkoutPage.verifyPage();
         }
 
+        [Then(@"priices are in pounds")]
+        public void ThenPriicesAreInPounds()
+        {
+            _checkoutPage.AssertCurency();
+        }
+
+        [Then(@"""(.*)"" package is selected by default")]
+        public void ThenPackageIsSelectedByDefault(string packageName)
+        {
+            Assert.AreEqual(packageName, _checkoutPage.getSelectedPlanName(), "Error: wrong default plan selected.");
+        }
+
 
     }
 }
