@@ -45,6 +45,7 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
         {
             var item = menu.FindElement(By.XPath("//ul[@id='menu']/li/ul/li/a[contains(text(), '" + itemName + "')]"));
             Assert.IsTrue(item.Displayed, "Error: no link with name " + itemName);
+            Assert.AreEqual(itemName, item.Text);
             item.Click();
         }
 

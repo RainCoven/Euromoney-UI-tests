@@ -1,6 +1,6 @@
 ﻿Feature: IFLR
 
-Scenario: Open IFLR from euromoney site
+Scenario: Open IFLR from Euromoney site
 	Given I am on the Legal Media page
 	When I click VISIT IFLR link
 	Then IFLR site is opened in new tab

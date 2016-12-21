@@ -41,7 +41,14 @@ namespace EuromoneySeleniumTest.Steps.IFLR
         [Then(@"IFLR site is opened in new tab")]
         public void ThenIFLRSiteIsOpenedInNewTab()
         {
-            ScenarioContext.Current.Pending();
+            var driver = (IWebDriver)ScenarioContext.Current["driver"];
+            var curTabsNum = driver.WindowHandles.Count;
+            _homePage = new HomePage();
+
+            driver.SwitchTo().Window(driver.WindowHandles[curTabsNum - 1]);
+
+            Assert.True(curTabsNum > 1);
+            _homePage.verifyPage();
         }
         
         [Then(@"there should be next personal plan Options")]

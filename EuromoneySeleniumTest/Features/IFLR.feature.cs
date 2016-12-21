@@ -64,10 +64,10 @@ namespace EuromoneySeleniumTest.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Open IFLR from euromoney site")]
+        [NUnit.Framework.DescriptionAttribute("Open IFLR from Euromoney site")]
         public virtual void OpenIFLRFromEuromoneySite()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open IFLR from euromoney site", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open IFLR from Euromoney site", ((string[])(null)));
 #line 3
 this.ScenarioSetup(scenarioInfo);
 #line 4
