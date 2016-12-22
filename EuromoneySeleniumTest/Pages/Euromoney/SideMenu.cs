@@ -10,6 +10,11 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
         {
         }
 
+        public IWebElement ShowMenuButton
+        {
+            get { return driver.FindElement(By.ClassName("icon-nav"));  }
+        }
+
         public IWebElement Footer
         {
             get { return driver.FindElement(By.Id("site_footer")); }
@@ -49,9 +54,14 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
             item.Click();
         }
 
-        public void OpenSideMenu()
+        public IWebElement GetMenuLink(string linkText)
         {
-            driver.FindElement(By.ClassName("icon-nav")).Click();
+            return Menu.FindElement(By.XPath("//ul[@id='menu']/li/a[contains(text(), '" + linkText + "')]"));
+        }
+
+        public IWebElement GetFooterLink(string linkText)
+        {
+            return Footer.FindElement(By.LinkText(linkText));
         }
     }
 }

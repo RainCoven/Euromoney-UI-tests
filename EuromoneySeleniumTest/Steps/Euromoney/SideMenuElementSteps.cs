@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
 namespace EuromoneySeleniumTest.Steps.Euromoney
@@ -10,7 +9,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         public void WhenIWillOpenSideMenu()
         {
             _sideMenu = _managmentPage.SideMenu;
-            _sideMenu.OpenSideMenu();
+            _sideMenu.ShowMenuButton.Click();
         }
 
         [Then(@"menu will be visible")]
@@ -24,7 +23,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         {
             foreach(TableRow row in table.Rows)
             {
-                var link = _sideMenu.Menu.FindElement(By.XPath("//ul[@id='menu']/li/a[contains(text(), '" + row["Link"] + "')]"));
+                var link = _sideMenu.GetMenuLink(row["Link"]);
                 Assert.True(link.Displayed, "Error: there is no link with name" + row["Link"] + "in menu");
             }
         }
@@ -38,7 +37,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         [Then(@"LinkedIn icon will be presrsent")]
         public void ThenLinkedInIconWillBePresrsent()
         {
-            Assert.True(_sideMenu.LinkedInButton.Displayed);
+            Assert.True(_sideMenu.LinkedInButton.Displayed, "Error: trere is no no LinkedIn reference in the footer.");
         }
 
         [Then(@"footer menu will have next links")]
@@ -46,7 +45,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         {
             foreach (TableRow row in table.Rows)
             {
-                var link = _sideMenu.Footer.FindElement(By.LinkText(row["Link"]));
+                var link = _sideMenu.GetFooterLink(row["Link"]);
                 Assert.True(link.Displayed, "Error: there is no link with name" + row["Link"] + "in menu");
             }
         }

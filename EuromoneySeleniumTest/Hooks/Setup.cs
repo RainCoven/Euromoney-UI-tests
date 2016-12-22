@@ -8,7 +8,6 @@ namespace EuromoneySeleniumTest.Hooks
     public sealed class Setup
     {
         static IWebDriver driver;
-        //static string baseurl = ConfigurationManager.AppSettings["baseUrl"];
 
         [BeforeScenario]
         public static void BeforeWebScenario()

@@ -1,8 +1,6 @@
 ﻿using EuromoneySeleniumTest.Pages;
 using OpenQA.Selenium;
-using System;
 using TechTalk.SpecFlow;
-using NUnit.Framework;
 using EuromoneySeleniumTest.Pages.Euromoney;
 
 namespace EuromoneySeleniumTest.Steps.Euromoney

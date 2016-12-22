@@ -1,6 +1,5 @@
 ﻿using EuromoneySeleniumTest.Pages.Euromoney;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
 namespace EuromoneySeleniumTest.Steps.Euromoney
@@ -30,8 +29,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
         [Then(@"page has ""(.*)"" link")]
         public void ThenPageHasLink(string linkText)
         {
-            IWebDriver driver = (IWebDriver)ScenarioContext.Current["driver"];
-            var link = driver.FindElement(By.LinkText(linkText));
+            var link = _legalMediaPage.GetLinkByText(linkText);
             Assert.True(link.Displayed, "Error: Link with text \"" + linkText + "\" aren't displayed on the page.");
         }
 

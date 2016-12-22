@@ -1,7 +1,6 @@
 ﻿using EuromoneySeleniumTest.Pages.IFLR;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
-using OpenQA.Selenium;
 
 namespace EuromoneySeleniumTest.Steps.IFLR
 {
@@ -41,23 +40,21 @@ namespace EuromoneySeleniumTest.Steps.IFLR
         [Then(@"IFLR site is opened in new tab")]
         public void ThenIFLRSiteIsOpenedInNewTab()
         {
-            var driver = (IWebDriver)ScenarioContext.Current["driver"];
-            var curTabsNum = driver.WindowHandles.Count;
             _homePage = new HomePage();
+            var curTabsNum = _homePage.GetBrowserOpenedTabsNumber();
+            _homePage.SwitchToTab(curTabsNum - 1);
 
-            driver.SwitchTo().Window(driver.WindowHandles[curTabsNum - 1]);
-
-            Assert.True(curTabsNum > 1);
+            Assert.True(curTabsNum > 1, "Error: trere's should be more than 1 tab opened.");
             _homePage.VerifyPage();
         }
         
         [Then(@"there should be next personal plan Options")]
         public void ThenThereShouldBeNextPersonalPlanOptions(Table table)
         {
-            foreach(TableRow roe in table.Rows)
+            foreach(TableRow row in table.Rows)
             {
-                var plan = _subscriptionPage.Packages.FindElement(By.XPath("//h2[contains(text(), 'package')]"));
-                Assert.True(plan.Displayed);
+                var package = _subscriptionPage.GetPackageByName(row["Option"]);
+                Assert.True(package.Displayed, "Error: \"" + row["Option"] + "\" aren't displayed.");
             }
         }
 

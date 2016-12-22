@@ -68,17 +68,19 @@ namespace EuromoneySeleniumTest.Pages
             return false;
         }
 
-        public bool IsDisplayed(By locator)
+        public IWebElement GetLinkByText(string text)
         {
-            try
-            {
-                IWebElement element = Find(locator);
-                return element.Displayed && element.Enabled;
-            }
-            catch (NoSuchElementException ex)
-            {
-                return false;
-            }
+            return driver.FindElement(By.LinkText(text));
+        }
+
+        public int GetBrowserOpenedTabsNumber()
+        {
+            return driver.WindowHandles.Count;
+        }
+
+        public void SwitchToTab(int handleIndex)
+        {
+            driver.SwitchTo().Window(driver.WindowHandles[handleIndex]);
         }
     }
 }

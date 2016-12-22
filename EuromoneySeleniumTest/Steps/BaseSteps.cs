@@ -12,9 +12,6 @@ namespace EuromoneySeleniumTest.Steps
 
         public BaseSteps()
         {
-            driver = (IWebDriver)ScenarioContext.Current["driver"];
         }
-
-
     }
 }

@@ -20,5 +20,10 @@ namespace EuromoneySeleniumTest.Pages.IFLR
         {
             get { return driver.FindElement(By.ClassName("packages")); }
         }
+
+        public IWebElement GetPackageByName(string name)
+        {
+            return Packages.FindElement(By.XPath("//h2[contains(text(), '" + name + "')]"));
+        }
     }
 }
