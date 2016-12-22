@@ -144,6 +144,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App.xsd">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="chromedriver.exe" />
   </ItemGroup>
   <ItemGroup />
