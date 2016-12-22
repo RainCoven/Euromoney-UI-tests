@@ -6,7 +6,7 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
     {
         public HomePage()
 		{
-            baseUrl = "http://www.euromoneyplc.com/";
+            url = euromoneyUrl;
             pageTitle = "Home | Euromoney Institutional Investor PLC";
         }
 

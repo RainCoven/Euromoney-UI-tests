@@ -7,7 +7,7 @@ namespace EuromoneySeleniumTest.Pages.IFLR
     {
         public SubscriptionPage()
 		{
-            baseUrl = "http://www.iflr.com/Subscription-Groups.html";
+            url = iflrUrl + "Subscription-Groups.html";
             pageTitle = "IFLR - International Financial Law Review";
         }
 

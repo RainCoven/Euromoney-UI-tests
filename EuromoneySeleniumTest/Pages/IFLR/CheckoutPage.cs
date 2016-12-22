@@ -8,7 +8,7 @@ namespace EuromoneySeleniumTest.Pages.IFLR
     {
         public CheckoutPage()
 		{
-            baseUrl = "http://www.iflr.com/Checkoutl";
+            url = iflrUrl + "Checkoutl";
             pageTitle = "Euromoney Checkout";
         }
 

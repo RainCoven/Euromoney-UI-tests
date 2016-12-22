@@ -6,7 +6,7 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
     {
         public LegalMediaPage()
 		{
-            baseUrl = "http://www.euromoneyplc.com/our-portfolio/legal-media";
+            url = euromoneyUrl + "our-portfolio/legal-media";
             pageTitle = "Legal media | Our portfolio | Euromoney Institutional Investor PLC";
         }
 

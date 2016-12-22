@@ -7,7 +7,7 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
     {
         public ManagmentPage()
 		{
-            baseUrl = "http://www.euromoneyplc.com/who-we-are/management-team";
+            url = euromoneyUrl + "who-we-are/management-team";
             pageTitle = "Management team | Who we are | Euromoney Institutional Investor PLC";
         }
 

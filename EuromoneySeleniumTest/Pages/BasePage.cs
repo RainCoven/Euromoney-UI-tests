@@ -15,17 +15,21 @@ namespace EuromoneySeleniumTest.Pages
     public class BasePage
     {
         public IWebDriver driver;
-        public static string baseUrl;
+        public static string euromoneyUrl;
+        public static string iflrUrl;
         public static string pageTitle;
+        public static string url;
 
         public BasePage()
         {
+            euromoneyUrl = ConfigurationManager.AppSettings["euromoneyUrl"];
+            iflrUrl = ConfigurationManager.AppSettings["iflrUrl"];
             driver = (IWebDriver)ScenarioContext.Current["driver"];
         }
 
         public void Open()
         {
-            driver.Navigate().GoToUrl(baseUrl);
+            driver.Navigate().GoToUrl(url);
         }
 
         public IWebElement Find(By locator)
@@ -45,12 +49,6 @@ namespace EuromoneySeleniumTest.Pages
 
         public void VerifyPage()
         {
-            VerifyPage(pageTitle);
-        }
-
-        public void Visit(string url, string pageTitle)
-        {
-            driver.Navigate().GoToUrl(baseUrl + url);
             VerifyPage(pageTitle);
         }
 
