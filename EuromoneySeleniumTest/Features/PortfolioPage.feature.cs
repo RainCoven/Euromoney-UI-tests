@@ -95,6 +95,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 16
  testRunner.Then("I should see Legal media page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
+ testRunner.And("page has section titled \"International Financial Law Review\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
  testRunner.And("page has \"VISIT IFLR\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

@@ -14,4 +14,5 @@ Scenario: Open Legal Media page
 	Given I am on the Our portfolio page
 	When I click on Legal media link
 	Then I should see Legal media page
+	And page has section titled "International Financial Law Review"
 	And page has "VISIT IFLR" link

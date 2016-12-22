@@ -14,5 +14,10 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
         {
             get { return driver.FindElement(By.XPath("//a[contains(text(), 'Visit IFLR')]")); }
         }
+
+        public IWebElement GetSectionNameByTitle(string title)
+        {
+            return driver.FindElement(By.XPath("//h2[contains(text(), '" + title + "')]"));
+        }
     }
 }

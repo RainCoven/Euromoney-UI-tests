@@ -60,6 +60,14 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
             _legalMediaPage.VerifyPage();
         }
 
+        [Then(@"page has section titled ""(.*)""")]
+        public void ThenPageHasSectionTitled(string title)
+        {
+            var sectionName = _legalMediaPage.GetSectionNameByTitle(title);
+            Assert.True(sectionName.Displayed, "Error: section " + title + "aren't present on page.");
+        }
+
+
 
     }
 }
