@@ -13,7 +13,7 @@ namespace EuromoneySeleniumTest.Pages.IFLR
 
         public IWebElement PersonalSubscriptionButton
         {
-            get { return driver.FindElement(By.XPath("//*[@id='content']/div/table/tbody/tr[4]/td[1]/a")); }
+            get { return driver.FindElement(By.XPath("//*[@id='content']//a[contains(text(), 'Select')][1]")); }
         }
 
         public IWebElement Packages

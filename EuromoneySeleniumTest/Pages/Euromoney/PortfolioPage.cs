@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using BasePageObjectModel;
+using OpenQA.Selenium;
 
 namespace EuromoneySeleniumTest.Pages.Euromoney
 {
@@ -10,9 +11,14 @@ namespace EuromoneySeleniumTest.Pages.Euromoney
             pageTitle = "Our portfolio | Euromoney Institutional Investor PLC";
         }
 
+        public IWebElement LegalMediaBlock
+        {
+            get { return driver.FindElement(By.XPath("//h2[contains(text(), 'Legal media')]")).GetParent(); }
+        }
+
         public IWebElement LegalMediaLink
         {
-            get { return driver.FindElement(By.XPath("/html/body/section/div[4]/div/div/div/div/div[1]/div/p[2]/a")); }
+            get { return LegalMediaBlock.FindElement(By.ClassName("read_more")); }
         }
 
 
