@@ -11,9 +11,9 @@ Scenario: Choose package page
 	When I click Subscribe button
 	Then Subscription page should be opened
 	And there should be next personal plan Options
-	| Option			 |
-	| Personal package	 |
-	| Group package		 |
+	| Option             |
+	| Personal package   |
+	| Group package      |
 	| Renew your package |
 
 Scenario: Choose personal package

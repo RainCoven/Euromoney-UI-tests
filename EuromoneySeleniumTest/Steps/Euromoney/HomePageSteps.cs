@@ -34,7 +34,7 @@ namespace EuromoneySeleniumTest.Steps.Euromoney
             Assert.True(_subMenu.Displayed, "Error: side menu wasn't opened.");
         }
         
-        [Then(@"then I click ""(.*)"" second level menu link")]
+        [When(@"I click ""(.*)"" second level menu link")]
         public void ThenThenIClickSecondLevelMenuLink(string linkName)
         {
             _sideMenu.ClickSecondLevelMenuItem(_subMenu, linkName);
